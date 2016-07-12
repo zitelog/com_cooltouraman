@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="holiday">
+		<field name="title" type="text" label="COM_COOLTOURAMAN_HOLIDAY_FIELD_TITLE_LABEL"
+			description="COM_COOLTOURAMAN_HOLIDAY_FIELD_TITLE_DESC"
+			required="true"/>
+		<field 
+			name="day" 
+			type="integer" 
+			default="0" 
+			label="COM_COOLTOURAMAN_HOLIDAY_FIELD_DAY_LABEL" 
+			description="COM_COOLTOURAMAN_HOLIDAY_FIELD_DAY_DESC"
+			first="1" 
+			last="31"
+			step="1"
+			required="true">
+		<option value="">JGLOBAL_SELECT_AN_OPTION</option>
+		</field>
+		<field 
+			name="month" 
+			type="integer" 
+			default="0" 
+			label="COM_COOLTOURAMAN_HOLIDAY_FIELD_MONTH_LABEL" 
+			description="COM_COOLTOURAMAN_HOLIDAY_FIELD_MONTH_DESC"
+			first="1" 
+			last="12"
+			step="1"
+			required="true">
+		<option value="">JGLOBAL_SELECT_AN_OPTION</option>
+		</field>
+		<field 
+			name="year" 
+			type="integer" 
+			default="0" 
+			label="COM_COOLTOURAMAN_HOLIDAY_FIELD_YEAR_LABEL" 
+			description="COM_COOLTOURAMAN_HOLIDAY_FIELD_YEAR_DESC"
+			first="2016" 
+			last="2050"
+			step="1"
+			required="true">
+		<option value="*">*</option>
+		</field>
+	</fieldset>
+	<field
+		name="id"
+		type="text"
+		class="readonly"
+		label="JGLOBAL_FIELD_ID_LABEL"
+		description ="JGLOBAL_FIELD_ID_DESC"
+		default="0"
+		readonly="true"
+	/>
+</form>

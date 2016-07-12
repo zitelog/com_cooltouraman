@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+   <update>
+      <name>Cooltoura Manager</name>
+      <description>Cooltoura Manager Component</description>
+      <element>com_cooltouraman</element>
+      <type>component</type>
+      <version>0.1.0</version>
+      <infourl title="Cooltoura Manager Component">https://github.com/zitelog/com_cooltouraman/releases/tag/0.1.0</infourl>
+      <downloads>
+	  <downloadurl type="full" format="zip">https://github.com/zitelog/com_cooltouraman/releases/download/0.1.0/com_cooltouraman-0.1.0.zip</downloadurl>
+      </downloads>
+      <targetplatform name="joomla" version="3.0" />
+   </update>
+</updates>

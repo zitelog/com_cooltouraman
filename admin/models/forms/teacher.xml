@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="teacher_information">
+		<field
+				name="site_access"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="COM_COOLTOURAMAN_TEACHER_FIELD_SITE_ACCESS_LABEL"
+				description="COM_COOLTOURAMAN_TEACHER_FIELD_SITE_ACCESS_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+		<field name="firstname" type="text"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_FIRSTNAME_DESC"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_FIRSTNAME_LABEL"
+			required="true"
+			size="30"
+		/>
+		<field name="lastname" type="text"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_LASTNAME_DESC"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_LASTNAME_LABEL"
+			required="true"
+			size="30"
+		/>
+		<field
+			name="birthday_date"
+			type="calendar"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_BIRTHDAY_DATE_LABEL"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_BIRTHDAY_DATE_DESC"
+			format="%d-%m-%Y"
+			size="22"
+			filter="user_utc"
+			required="true"
+		/>
+		<field name="email" type="email"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_EMAIL_DESC"
+			label="JGLOBAL_EMAIL"
+			required="true"
+			size="30"
+			validate="email"
+		/>
+		<field name="primary_phone" type="tel"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_PRIMARY_PHONE_DESC"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_PRIMARY_PHONE_LABEL"
+			required="true"
+			size="30"
+		/>
+		<field name="street" type="text"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_STREET_DESC"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_STREET_LABEL"
+			size="30"
+		/>
+		<field name="zip" type="number"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_ZIP_DESC"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_ZIP_LABEL"
+			filter="integer"
+			size="5"
+		/>
+		<field 
+			name="provincia" 
+			type="sql" 
+			default="58" 
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_PROVINCIA_LABEL"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_PROVINCIA_DESC"
+			query="SELECT id, nome FROM #__cooltouraman_province ORDER BY nome ASC"
+			key_field="id" 
+			value_field="nome"/>
+		<field 
+			name="comune" 
+			type="sql" 
+			default="58091" 
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_COMUNE_LABEL"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_COMUNE_DESC"
+			query="SELECT id, nome FROM #__cooltouraman_comuni ORDER BY nome ASC"
+			key_field="id" 
+			value_field="nome"/>
+		<field name="cf" type="text"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_CF_DESC"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_CF_LABEL"
+			size="30"
+		/>
+		<field name="wifi_key" type="text"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_WIFI_KEY_DESC"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_WIFI_KEY_LABEL"
+			size="30"
+		/>
+		<field
+			name="register_date"
+			type="calendar"
+			class="readonly"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_REGISTRATION_DATE_LABEL"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_REGISTRATION_DATE_DESC"
+			readonly="true"
+			format="%d-%m-%Y %H:%M:%S"
+			size="22"
+			filter="user_utc"
+		/>
+		<field
+			name="assignment_courses_number"
+			type="text"
+			class="readonly"
+			label="COM_COOLTOURAMAN_ASSIGNMENT_COURSES"
+			description ="COM_COOLTOURAMAN_ASSIGNMENT_COURSES"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			name="id"
+			type="text"
+			class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC"
+			default="0"
+			readonly="true"
+		/>
+	</fieldset>
+	<fields name="skills" label="COM_COOLTOURAMAN_TEACHER_SKILLS">
+		<field
+			name="teacher_of"
+			type="list"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_TEACHER_OF_LABEL"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_TEACHER_OF_DESC"
+			required="true"
+			multiple="true">
+			<option value="LANGUAGE">LANGUAGE</option>
+			<option value="THEATER">THEATER</option>
+			<option value="MUSIC">MUSIC</option>
+			<option value="SINGING">SINGING</option>
+			<option value="LABORATORY">LABORATORY</option>
+			<option value="INFORMATICS">INFORMATICS</option>
+		</field>
+			<field
+			name="teacher_for"
+			type="list"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_TEACHER_FOR_LABEL"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_TEACHER_FOR_DESC"
+			required="true"
+			multiple="true">
+			<option value="ADULT">ADULT</option>
+			<option value="TEENAGERS">TEENAGERS</option>
+			<option value="CHILDREN">CHILDREN</option>
+		</field>
+		<field
+			name="known_languages"
+			type="list"
+			label="COM_COOLTOURAMAN_TEACHER_FIELD_KNOWN_LANGUAGE_LABEL"
+			description="COM_COOLTOURAMAN_TEACHER_FIELD_KNOWN_LANGUAGE_DESC"
+			multiple="true"
+			showon="course_type:LANGUAGE">
+			<option value="ENGLISH">ENGLISH</option>
+			<option value="SPANISH">SPANISH</option>
+			<option value="CHINESE">CHINESE</option>
+			<option value="FRENCH">FRENCH</option>
+			<option value="GERMAN">GERMAN</option>
+		</field>
+		<field
+				name="native_language"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="COM_COOLTOURAMAN_TEACHER_FIELD_NATIVE_LANGUAGE_LABEL"
+				description="COM_COOLTOURAMAN_TEACHER_FIELD_NATIVE_LANGUAGE_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+	</fields>
+</form>
